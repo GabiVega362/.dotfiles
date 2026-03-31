@@ -53,8 +53,3 @@ cp ~/.dotfiles/.wgetrc ~/
 source ~/.bashrc
 ```
 
----
-
-## SSH Keys
-
-The `.bashrc` auto-loads the SSH key at `~/.ssh/keys/audea` on shell start. Make sure it exists or remove/adjust that line.
