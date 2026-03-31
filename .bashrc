@@ -115,7 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
 #Fanxy aliases and beautyfillin
 
 # +----------------------------------+
@@ -126,8 +125,8 @@ fi
 
 command -v bat >/dev/null 2>&1 && {
   alias  cat='bat --style=plain --color=always --paging=never'
-  alias -g -h='-h 2>&1 | bat --language=help --style=plain'
-  alias -g -help='--help 2>&1 | bat --language=help --style=plain'
+  # alias -g -h='-h 2>&1 | bat --language=help --style=plain'    # zsh only, not compatible with bash
+  # alias -g -help='--help 2>&1 | bat --language=help --style=plain'  # zsh only, not compatible with bash
 }
 
 # +----------------------------------+
@@ -172,3 +171,20 @@ command -v starship >/dev/null 2>&1 && {
 command -v zoxide >/dev/null 2>&1 && {
   eval "$(zoxide init bash --cmd cd)"
 }
+
+# +----------------------------------+
+# |                SSH               |
+# +----------------------------------+
+eval `ssh-agent` > /dev/null
+ssh-add ~/.ssh/keys/audea > /dev/null 2>&1
+
+# +----------------------------------+
+# |                PATH              | 
+# +----------------------------------+
+export PATH="$HOME/.local/bin:$PATH"
+
+# +----------------------------------+
+# |             CUSTOM               |
+# +----------------------------------+
+alias pls='sudo $(fc -ln -1)'
+alias enum4linux='perl /opt/enum4linux/enum4linux.pl'
