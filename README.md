@@ -17,6 +17,7 @@ Used by the terminal and Starship prompt for icons and ligatures.
 Color theme used across the setup. Already configured in `starship.toml`.
 
 To apply it to your terminal emulator, grab the theme for your app from the [official Catppuccin repo](https://github.com/catppuccin/catppuccin).
+- https://github.com/catppuccin/windows-terminal
 
 ---
 
