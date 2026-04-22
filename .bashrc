@@ -138,6 +138,7 @@ command -v bat >/dev/null 2>&1 && {
 command -v direnv >/dev/null 2>&1 && {
   eval "$(direnv hook bash)"
 }
+export DIRENV_LOG_FORMAT=""
 
 # +----------------------------------+
 # |               LSD                |
@@ -173,6 +174,7 @@ command -v zoxide >/dev/null 2>&1 && {
 }
 
 # +----------------------------------+
+<<<<<<< HEAD
 # |                SSH               |
 # +----------------------------------+
 eval `ssh-agent` > /dev/null
@@ -188,3 +190,10 @@ export PATH="$HOME/.local/bin:$PATH"
 # +----------------------------------+
 alias pls='sudo $(fc -ln -1)'
 alias enum4linux='perl /opt/enum4linux/enum4linux.pl'
+=======
+# |             CUSTOM               |
+# +----------------------------------+
+
+alias pls='sudo $(fc -ln -1)'
+export PATH="$HOME/.local/bin:$PATH"
+>>>>>>> 549b09f (Update .bashrc to set DIRENV_LOG_FORMAT and add custom alias;)
